@@ -1,0 +1,17 @@
+{
+  "name": "drupal/bsbo",
+  "type": "drupal-theme",
+  "description": "Drupal 8 Bootstrap theme for Backoffice",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "jakabadambalazs",
+      "email": "jakabadambalazs@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "twbs/bootstrap": "^3.3"
+  }
+}

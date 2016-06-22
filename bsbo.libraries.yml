@@ -1,0 +1,39 @@
+attributes:
+  js:
+    js/attributes.js: {}
+  dependencies:
+    - core/jquery
+    - core/underscore
+
+drupal.bootstrap:
+  js:
+    js/drupal.bootstrap.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+
+theme:
+  js:
+    js/theme.js: {}
+  dependencies:
+    - bootstrap/drupal.bootstrap
+    - bootstrap/attributes
+  css:
+      theme:
+        css/style.css: {}
+
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/transition.js: {}
