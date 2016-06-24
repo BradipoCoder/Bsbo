@@ -28,5 +28,4 @@ class Bsbo {
       self::$initialized = TRUE;
     }
   }
-
 }

@@ -20,13 +20,16 @@
 'list-group',
 compact ? 'compact',
 ] %}
+
 {% if content %}
-	<dl{{ attributes.addClass(classes) }}>
+	<ul{{ attributes.addClass(classes) }}>
 		{% for item in content %}
-			<dt class="list-group__link">{{ item.link }}</dt>
-			{% if item.description %}
-				<dd class="list-group__description">{{ item.description }}</dd>
-			{% endif %}
+			<li class="list-group-item">
+				{{ item.link }}
+				{% if item.description %}
+					<div class="list-group-item-description">{{ item.description }}</div>
+				{% endif %}
+			</li>
 		{% endfor %}
-	</dl>
+	</ul>
 {% endif %}

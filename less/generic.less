@@ -10,6 +10,11 @@
 }
 
 /* Fix checkboxes div.checkbox */
+td.checkbox, th.checkbox {
+  display: table-cell;
+  margin: 0;
+}
+
 div.checkbox {
   border: 0;
   margin: 0;
@@ -17,5 +22,32 @@ div.checkbox {
   input[type="checkbox"] {
     position: relative;
     margin: 0;
+  }
+}
+
+/* Block Layout */
+table#blocks {
+  tr.region-message.region-empty {
+    em {
+      font-size: 9px;
+    }
+  }
+  tr.region-message.region-populated {
+    display: none;
+  }
+  tr.region-title {
+    font-weight: bold;
+    font-size: 120%;
+    div.region-title__action {
+      font-weight: normal;
+      font-size: 80%;
+    }
+  }
+}
+
+/* Views Listing */
+table.views-listing-table {
+  h3.views-ui-view-title {
+    font-size: 14px;
   }
 }
