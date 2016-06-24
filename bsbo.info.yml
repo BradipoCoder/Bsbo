@@ -5,7 +5,7 @@ package: 'Bootstrap'
 core: 8.x
 
 type: theme
-base theme: false
+base theme: bootstrap
 
 
 # Regions
@@ -24,49 +24,5 @@ regions:
 
 # Libraries
 libraries:
-  - 'bsbo/theme'
-
-# Libraries(Extend)
-libraries-extend:
-#  core/drupal.ajax:
-#    - bootstrap/drupal.ajax
-#  core/drupal.autocomplete:
-#    - bootstrap/drupal.autocomplete
-#  core/drupal.form:
-#    - bootstrap/drupal.form
-#  core/drupal.progress:
-#    - bootstrap/drupal.progress
-#  core/drupal.states:
-#    - bootstrap/drupal.states
-#  core/drupal.tabledrag:
-#    - bootstrap/drupal.tabledrag
-#  views/views.ajax:
-#    - bootstrap/views.ajax
-
-# Libraries(Override)
-libraries-override:
-#  core/drupal.batch: bootstrap/drupal.batch
-#  core/drupal.collapse: false
-#  core/drupal.dropbutton: bootstrap/dropdown
-#  core/drupal.vertical-tabs: bootstrap/drupal.vertical-tabs
-#  filter/drupal.filter: bootstrap/drupal.filter
-#  system/admin: false
-#  text/drupal.text: bootstrap/drupal.text
-
-# Remove individual stylesheets.
-#  system/base:
-#    css:
-#      component:
-#        css/components/ajax-progress.module.css: false
-#        css/components/autocomplete-loading.module.css: false
-#        css/components/tabledrag.module.css: false
-#
-#  file/drupal.file:
-#    css:
-#      theme:
-#        css/file.admin.css: false
-#
-#  filter/drupal.filter.admin:
-#    css:
-#      theme:
-#        css/filter.admin.css: false
+  - 'bsbo/global-styling'
+  - 'bsbo/bootstrap-scripts'

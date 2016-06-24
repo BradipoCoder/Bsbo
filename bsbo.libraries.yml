@@ -1,27 +1,7 @@
-attributes:
-  js:
-    js/attributes.js: {}
-  dependencies:
-    - core/jquery
-    - core/underscore
-
-drupal.bootstrap:
-  js:
-    js/drupal.bootstrap.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
-    - core/drupalSettings
-
-theme:
-  js:
-    js/theme.js: {}
-  dependencies:
-    - bootstrap/drupal.bootstrap
-    - bootstrap/attributes
+global-styling:
   css:
-      theme:
-        css/style.css: {}
+    theme:
+      css/style.css: {}
 
 bootstrap-scripts:
   js:

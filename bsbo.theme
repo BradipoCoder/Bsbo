@@ -6,23 +6,3 @@ use Drupal\bsbo\Bsbo;
  * Initialize the active theme.
  */
 Bsbo::initialize();
-
-
-/**
- *
- * @see \Drupal\bootstrap\Bootstrap::preprocess()
- *
- * Preprocess theme hook variables.
- *
- * @param array  $variables
- *   The variables array, passed by reference.
- * @param string $hook
- *   The name of the theme hook.
- * @param array  $info
- *   The theme hook info.
- */
-function bsbo_preprocess(&$variables, $hook, $info)
-{
-  //echo '<pre>' . var_dump($variables). '</pre>';
-}
-
