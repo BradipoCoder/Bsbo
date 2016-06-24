@@ -18,7 +18,7 @@ class RealTimeCachedCompiler {
   /**
    * @var string
    */
-  protected $cacheDir = DRUPAL_ROOT . '/sites/default/files/bsbo/less';
+  protected $cacheBaseDir = DRUPAL_ROOT . '/sites/default/files/bsbo';
 
   /**
    * @var array
@@ -31,6 +31,7 @@ class RealTimeCachedCompiler {
    * @param array $options
    */
   public function __construct($options = []) {
+    $this->ensureCacheDir($this->cacheBaseDir);
     $this->setOptions($options);
   }
 
@@ -62,7 +63,9 @@ class RealTimeCachedCompiler {
   public function compile($force = FALSE) {
     if ($force) {
       $compiledCss = $this->getRecompileThemeLessFilesCss();
-      $out = DrupalHelper::getThemePath("bsbo") . "/css/style.css";
+      $cssCacheDir = $this->cacheBaseDir . '/css';
+      $this->ensureCacheDir($cssCacheDir);
+      $out = $cssCacheDir . "/style.css";
       file_put_contents($out, $compiledCss);
     }
   }
@@ -84,6 +87,15 @@ class RealTimeCachedCompiler {
       return $parser->getCss();
     } catch(\Exception $e) {
       throw new \Exception(__CLASS__ . " EXCEPTION: " . $e->getMessage());
+    }
+  }
+
+  /**
+   * @param string $dir
+   */
+  protected function ensureCacheDir($dir) {
+    if (!is_dir($dir)) {
+      mkdir($dir, 0775, TRUE);
     }
   }
 

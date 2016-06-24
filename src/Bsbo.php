@@ -14,25 +14,19 @@ use Drupal\bsbo\Less\RealTimeCachedCompiler;
  *
  * @package Drupal\bsbo
  */
-class Bsbo
-{
+class Bsbo {
   public static $initialized = FALSE;
 
   /**
    * Initializes the active theme.
    */
   final public static function initialize() {
-    echo "BSBO INIT";
-
-    /*
-    if (!self::$initialized)
-    {
-      $compiler = new RealTimeCachedCompiler(['compress' => true]);
-      $compiler->compile(true);
+    if (!self::$initialized) {
+      $compiler = new RealTimeCachedCompiler(['compress' => TRUE]);
+      $compiler->compile(TRUE);
 
       self::$initialized = TRUE;
     }
-    */
   }
 
 }
