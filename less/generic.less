@@ -1,0 +1,21 @@
+/* Fix for 'Operations' dropdowns overflow cut down */
+.main-container {
+  section.main-content {
+    div.region-content {
+      > div.table-responsive {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+/* Fix checkboxes div.checkbox */
+div.checkbox {
+  border: 0;
+  margin: 0;
+  height: 100%;
+  input[type="checkbox"] {
+    position: relative;
+    margin: 0;
+  }
+}
