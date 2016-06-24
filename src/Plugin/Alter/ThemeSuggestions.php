@@ -8,15 +8,14 @@
 namespace Drupal\bsbo\Plugin\Alter;
 
 use Drupal\bootstrap\Annotation\BootstrapAlter;
-use Drupal\bootstrap\Plugin\Alter\AlterInterface;
-use Drupal\bootstrap\Plugin\PluginBase;
+use Drupal\bootstrap\Plugin\Alter\ThemeSuggestions as BootstrapThemeSuggestions;
 
 /**
  * Implements hook_theme_suggestions_alter().
  *
  * @BootstrapAlter("theme_suggestions")
  */
-class ThemeSuggestions extends PluginBase implements AlterInterface {
+class ThemeSuggestions extends BootstrapThemeSuggestions {
   /** @var array */
   protected $unallowedIdentifiers = [
     'table',
@@ -31,6 +30,7 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
    * {@inheritdoc}
    */
   public function alter(&$suggestions, &$variables = NULL, &$hook = NULL) {
+    parent::alter($suggestions, $variables, $hook);
     switch ($hook) {
       case 'table':
         if ($identifier = $this->getIdentifierFromAttributes($variables["attributes"])) {

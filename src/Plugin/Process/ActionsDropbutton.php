@@ -14,15 +14,14 @@ use Drupal\bootstrap\Utility\Element;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Replaces the process callback for dropbuttons on an "actions" element.
+ * This is a full overwrite because of bug - in node save 
  *
  * @BootstrapProcess("actions__dropbutton",
  *   replace = "Drupal\Core\Render\Element\Actions::preRenderActionsDropbutton",
  * )
  *
- * @see \Drupal\Core\Render\Element\Actions::preRenderActionsDropbutton()
+ * @see Drupal\bootstrap\Plugin\Process\ActionsDropbutton
  *
- * @todo This may become a #pre_render callback.
  */
 class ActionsDropbutton extends ProcessBase implements ProcessInterface {
 
